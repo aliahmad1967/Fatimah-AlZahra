@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فاطمة الزهراء (عليها السلام) - سيدة نساء العالمين</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'fatima-teal': '#0F4C5C',
-              'fatima-dark': '#1D2D44',
-              'fatima-gold': '#C5A065',
-              'fatima-cream': '#F9F4EF',
-              'fatima-accent': '#E36414',
-            },
-            fontFamily: {
-              'amiri': ['"Amiri"', 'serif'],
-              'kufi': ['"Noto Kufi Arabic"', 'sans-serif'],
-            }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فاطمة الزهراء (عليها السلام) - سيدة نساء العالمين</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'fatima-teal': '#0F4C5C',
+            'fatima-dark': '#1D2D44',
+            'fatima-gold': '#C5A065',
+            'fatima-cream': '#F9F4EF',
+            'fatima-accent': '#E36414',
+          },
+          fontFamily: {
+            'amiri': ['"Amiri"', 'serif'],
+            'kufi': ['"Noto Kufi Arabic"', 'sans-serif'],
           }
         }
       }
-    </script>
-    <style>
-      html {
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-      }
-      body {
-        background-color: #F9F4EF;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #F9F4EF;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #0F4C5C;
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #1D2D44;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    html {
+      /* scroll-snap-type: y mandatory; - Removed to allow normal scrolling on all pages */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #F9F4EF;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F9F4EF;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #0F4C5C;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1D2D44;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -63,7 +71,10 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

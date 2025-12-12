@@ -1,36 +1,43 @@
-import React from 'react';
-import { Hero } from './components/Hero';
-import { TreeVisualization } from './components/TreeVisualization';
-import { FatimiyyaBanner } from './components/FatimiyyaBanner';
-import { Footer } from './components/Footer';
-import { APP_DATA } from './constants';
-import { SectionType } from './types';
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { DETAILED_CONTENT } from "./data/detailedContent";
+import { ContentPage } from "./pages/ContentPage";
+import { HomePage } from "./pages/HomePage";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-fatima-cream font-kufi selection:bg-fatima-gold selection:text-fatima-dark">
-      <Hero />
-      
-      <main className="relative">
-        {/* Render Sections */}
-        {APP_DATA.map((section, index) => {
-            // Inject the Fatimiyya Banner before the Martyrdom section
-            if (section.id === SectionType.MARTYRDOM) {
-                return (
-                    <React.Fragment key="banner-wrapper">
-                        <FatimiyyaBanner />
-                        <TreeVisualization key={section.id} data={section} index={index} />
-                    </React.Fragment>
-                );
-            }
-            return (
-                <TreeVisualization key={section.id} data={section} index={index} />
-            );
-        })}
-      </main>
-
-      <Footer />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/introduction"
+            element={<ContentPage data={DETAILED_CONTENT.INTRODUCTION} />}
+          />
+          <Route
+            path="/birth"
+            element={<ContentPage data={DETAILED_CONTENT.BIRTH} />}
+          />
+          <Route
+            path="/marriage"
+            element={<ContentPage data={DETAILED_CONTENT.MARRIAGE} />}
+          />
+          <Route
+            path="/ordeal"
+            element={<ContentPage data={DETAILED_CONTENT.ORDEAL} />}
+          />
+          <Route
+            path="/departure"
+            element={<ContentPage data={DETAILED_CONTENT.DEPARTURE} />}
+          />
+          <Route
+            path="/references"
+            element={<ContentPage data={DETAILED_CONTENT.REFERENCES} />}
+          />
+        </Routes>
+      </Layout>
+    </Router>
   );
 };
 
