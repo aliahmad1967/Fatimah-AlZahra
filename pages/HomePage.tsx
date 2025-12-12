@@ -69,6 +69,17 @@ export const HomePage: React.FC = () => {
             <TreeVisualization key={section.id} data={section} index={index} />
           );
         })}
+        })}
+      </div>
+
+       {/* Social Share Section for the Website */}
+       <div className="container mx-auto px-4 py-8 mb-8">
+        <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-fatima-gold/20 max-w-2xl mx-auto">
+           <SocialShare 
+             url="https://fatimah-al-zahra.vercel.app/" 
+             title="موقع السيدة فاطمة الزهراء (عليها السلام) - سيدة نساء العالمين" 
+           />
+        </div>
       </div>
     </>
   );
