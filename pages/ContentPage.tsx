@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { SocialShare } from "../components/SocialShare";
 import { ContentSection } from "../data/detailedContent";
 
 interface ContentPageProps {
@@ -110,6 +111,8 @@ export const ContentPage: React.FC<ContentPageProps> = ({ data }) => {
                 );
               })}
             </div>
+
+            <SocialShare url={window.location.href} title={data.title} />
           </div>
         </div>
       </div>
